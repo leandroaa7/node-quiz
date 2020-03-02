@@ -10,6 +10,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 module.exports = {
+
     dialectModule: sqlite,
     dialect: process.env.DB_DIALECT || 'sqlite',
     host: process.env.DB_HOST,
@@ -26,6 +27,9 @@ module.exports = {
     //desabilitar logs
     loggin: true,
     define: {
+        //desativar o nome das tabelas criadas no plural
+        freezeTableName: true,
+
         //faz com que toda tabela possua os campos created_at e updated_at
         timestamps: true,
         // faz com que as tabelas estejam no formato undeline, exemplo a tabela UserGroups se torna user_group

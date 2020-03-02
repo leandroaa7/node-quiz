@@ -9,6 +9,13 @@ const config = require('../database/config');
 const db = {};
 
 let sequelize = new Sequelize(config.database, config.username, config.password, config);
+/* sequelize.getQueryInterface().showAllSchemas().then((tableObj) => {
+  console.log('// Tables in database','==========================');
+  console.log(tableObj);
+})
+.catch((err) => {
+  console.log('showAllSchemas ERROR',err);
+}) */
 //buscar models
 fs
   .readdirSync(__dirname)
