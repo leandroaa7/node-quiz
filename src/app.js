@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const errorHandler = require('./controllers/error');
+const errorHandler = require('./controllers/error.controller');
 const indexRouter = require('./routes/index');
 
 //environment
